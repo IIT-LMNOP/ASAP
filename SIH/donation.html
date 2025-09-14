@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Our Mission - AlumniConnect Donations</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="donation.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="#" class="logo">AlumniConnect</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#donation" class="active">Donation</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Support Excellence in Education</h1>
+            <p>Your philanthropic support helps us nurture future leaders, advance cutting-edge research, and build world-class infrastructure that benefits generations of students.</p>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+        <div class="breadcrumb-content">
+            <a href="#home">Home</a> / <span>Giving Back</span>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="section-header">
+                <h2>Areas of Support</h2>
+                <p>Choose the area where you'd like to make an impact. Every contribution helps us maintain our commitment to excellence and creates opportunities for current and future students to thrive in their academic and professional journeys.</p>
+            </div>
+
+            <!-- Stats Section -->
+            <div class="stats-section">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">₹2.5Cr</div>
+                        <div class="stat-label">Total Funds Raised</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">1,200+</div>
+                        <div class="stat-label">Students Supported</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">150+</div>
+                        <div class="stat-label">Projects Funded</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Alumni Donors</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Donation Cards Grid -->
+            <div class="donation-cards">
+                <!-- Holistic Development -->
+                <div class="donation-card holistic">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="card-category">Education Excellence</div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Holistic Development</h3>
+                        <p class="card-description">Support comprehensive education programs that foster intellectual, emotional, and social growth through innovative curriculum design and mentorship initiatives.</p>
+                        <div class="card-impact">
+                            <h4>Impact Statement</h4>
+                            <p>₹5,000 sponsors a student's holistic development program for one semester, including workshops and mentoring sessions.</p>
+                        </div>
+                        <div class="donation-amounts">
+                            <button class="amount-btn" onclick="selectAmount(this, 2500)">₹2,500</button>
+                            <button class="amount-btn" onclick="selectAmount(this, 5000)">₹5,000</button>
+                            <button class="amount-btn" onclick="selectAmount(this, 10000)">₹10,000</button>
+                        </div>
+                        <button class="donate-btn" onclick="donate('holistic')">Donate Now</button>
+                    </div>
+                </div>
+
+                <!-- Infrastructure Support -->
+                <div class="donation-card infrastructure">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="card-category">Campus Development</div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Infrastructure Support</h3>
+                        <p class="card-description">Contribute to building and maintaining state-of-the-art facilities including modern classrooms, research laboratories, and digital infrastructure.</p>
+                        <div class="card-impact">
+                            <h4>Impact Statement</h4>
+                            <p>₹25,000 helps upgrade a classroom with modern technology and learning equipment for enhanced educational delivery.</p>
+                        </div>
+                        <div class="donation-amounts">
+                            <button class="amount-btn" onclick="selectAmount(this, 10000)">₹10,000</button>
+                            <button class="amount-btn" onclick="selectAmount(this, 25000)">₹25,000</button>
+                            <button class="amount-btn" onclick="selectAmount(this, 50000)">₹50,000</button>
+                        </div>
+                        <button class="donate-btn" onclick="donate('infrastructure')">Donate Now</button>
+                    </div>
+                </div>
+
+                <!-- Student Financial Support -->
+                <div class="donation-card financial">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-scholarship"></i>
+                        </div>
+                        <div class="card-category">Student Aid</div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Student Financial Support</h3>
+                        <p class="card-description">Provide scholarships and financial assistance to deserving students from economically disadvantaged backgrounds to ensure inclusive education.</p>
+                        <div class="card-impact">
+                            <h4>Impact Statement</h4>
+                            <p>₹15,000 provides a complete scholarship covering tuition and essentials for one student for an entire semester.</p>
+                        </div>
+                        <div class="donation-amounts">
+                            <button class="amount-btn" onclick="selectAmount(this, 5000)">₹5,000</button>
+                            <button class="amount-btn" onclick="selectAmount(this, 15000)">₹15,000</button>
+                            <button class="amount-btn" onclick="selectAmount(this, 30000)">₹30,000</button>
+                        </div>
+                        <button class="donate-btn" onclick="donate('financial')">Donate Now</button>
+                    </div>
+                </div>
+
+                <!-- Alumni and Corporate Connect -->
+                <div class="donation-card corporate">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <div class="card-category">Professional Network</div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Alumni & Corporate Connect</h3>
+                        <p class="card-description">Support networking initiatives, industry partnerships, and mentorship programs that bridge the gap between academia and professional excellence.</p>
+                        <div class="card-impact">
+                            <h4>Impact Statement</h4>
+                            <p>₹8,000 sponsors a networking event connecting 50+ students with industry leaders and successful alumni.</p>
+                        </div>
+                        <div class="donation-amounts">
+                            <button class="amount-btn" onclick="selectAmount(this, 3000)">₹3,000</button>
+                            <button class="amount-btn" onclick="selectAmount(this, 8000)">₹8,000</button>
+                            <button class="amount-btn" onclick="selectAmount(this, 15000)">₹15,000</button>
+                        </div>
+                        <button class="donate-btn" onclick="donate('corporate')">Donate Now</button>
+                    </div>
+                </div>
+
+                <!-- Art and Culture -->
+                <div class="donation-card culture">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <div class="card-category">Cultural Heritage</div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Art & Culture</h3>
+                        <p class="card-description">Foster creativity and cultural appreciation through art exhibitions, music programs, theatrical performances, and creative workshops for holistic development.</p>
+                        <div class="card-impact">
+                            <h4>Impact Statement</h4>
+                            <p>₹6,000 sponsors a cultural festival or art workshop benefiting 100+ students and promoting creative expression.</p>
+                        </div>
+                        <div class="donation-amounts">
+                            <button class="amount-btn" onclick="selectAmount(this, 2000)">₹2,000</button>
+                            <button class="amount-btn" onclick="selectAmount(this, 6000)">₹6,000</button>
+                            <button class="amount-btn" onclick="selectAmount(this, 12000)">₹12,000</button>
+                        </div>
+                        <button class="donate-btn" onclick="donate('culture')">Donate Now</button>
+                    </div>
+                </div>
+
+                <!-- Sports -->
+                <div class="donation-card sports">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="card-category">Athletic Excellence</div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Sports & Athletics</h3>
+                        <p class="card-description">Support sports infrastructure, equipment procurement, coaching programs, and athletic competitions that promote physical fitness and team spirit.</p>
+                        <div class="card-impact">
+                            <h4>Impact Statement</h4>
+                            <p>₹10,000 provides sports equipment and professional coaching for an entire team throughout one competitive season.</p>
+                        </div>
+                        <div class="donation-amounts">
+                            <button class="amount-btn" onclick="selectAmount(this, 4000)">₹4,000</button>
+                            <button class="amount-btn" onclick="selectAmount(this, 10000)">₹10,000</button>
+                            <button class="amount-btn" onclick="selectAmount(this, 20000)">₹20,000</button>
+                        </div>
+                        <button class="donate-btn" onclick="donate('sports')">Donate Now</button>
+                    </div>
+                </div>
+
+                <!-- Entrepreneurship Support -->
+                <div class="donation-card entrepreneurship">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="card-category">Innovation Hub</div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Entrepreneurship Support</h3>
+                        <p class="card-description">Fund startup incubation programs, business development workshops, and innovation labs that transform student ideas into successful ventures.</p>
+                        <div class="card-impact">
+                            <h4>Impact Statement</h4>
+                            <p>₹20,000 provides seed funding and comprehensive mentorship for one promising startup initiative from conception to launch.</p>
+                        </div>
+                        <div class="donation-amounts">
+                            <button class="amount-btn" onclick="selectAmount(this, 7000)">₹7,000</button>
+                            <button class="amount-btn" onclick="selectAmount(this, 20000)">₹20,000</button>
+                            <button class="amount-btn" onclick="selectAmount(this, 40000)">₹40,000</button>
+                        </div>
+                        <button class="donate-btn" onclick="donate('entrepreneurship')">Donate Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="cta-section">
+                <h3>Support Where It's Needed Most</h3>
+                <p>Can't decide on a specific area? Make a general contribution that will be strategically allocated to the initiatives with the greatest impact and urgent funding requirements.</p>
+                <button class="cta-btn" onclick="donate('general')">Make General Donation</button>
+            </div>
+        </div>
+    </main>
+  <script src="donation.js"></script>
+
+</body>
+</html>
