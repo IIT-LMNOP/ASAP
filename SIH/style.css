@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color:white;
 }
 
 :root {
@@ -42,6 +43,7 @@ body {
     top: 0;
     width: 100%;
     z-index: 1000;
+    background: rgba(15, 23, 42, 0.98);
     transition: all 0.3s ease;
 }
 
@@ -57,6 +59,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 0 2rem;
+    background: rgba(15, 23, 42, 0.98);
 }
 
 .logo {
@@ -1038,4 +1041,11 @@ body {
 .card-content::-webkit-scrollbar {
     display: none;
     /* Chrome, Safari */
+}
+
+
+.logowithicon>img {
+    width: 250px;
+    height: 50px;
+    object-fit: contain;
 }
