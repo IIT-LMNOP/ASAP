@@ -1,0 +1,12 @@
+langchain
+langchain-community
+langchain-ollama
+fastapi
+uvicorn
+psycopag2-binary
+langchain-core
+sentence-transformers
+langchain-huggingface
+faiss-cpu
+pydantic
+python-dotenv

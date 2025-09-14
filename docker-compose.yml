@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:7.0
+    container_name: alumni_mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: password123
+    networks:
+      - alumni_network
+
+  alumni_api:
+    build: .
+    container_name: alumni_rag_api
+    ports:
+      - "8000:8000"
+    environment:
+      - MONGO_URI=mongodb://admin:password123@mongodb:27017/
+      - DB_NAME=alumni_db
+      - COLLECTION_NAME=alumni
+    depends_on:
+      - mongodb
+    volumes:
+      - ./vectorstore_data:/app/vectorstore_data
+    networks:
+      - alumni_network
+
+volumes:
+  mongodb_data:
+
+networks:
+  alumni_network:
+    driver: bridge
