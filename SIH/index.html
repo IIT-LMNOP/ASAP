@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlumniConnect - Professional Alumni Network</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">AlumniConnect</div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="donation.html">Donation</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="#" class="btn btn-secondary" onclick="openModal('loginModal')">Login</a>
+                <a href="#" class="btn btn-primary" onclick="openModal('signupModal')">Sign Up</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1 id="heading">Connecting Past, Empowering Future</h1>
+            <p>Join thousands of alumni building stronger professional networks and making a lasting impact on future
+                generations.</p>
+            <div class="hero-buttons">
+                <a href="#" class="btn btn-primary" onclick="openModal('signupModal')">Join Our Network</a>
+                <a href="#about" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+    </main>
+
+
+
+    <!-- Cards Section -->
+    <section class="cards-section">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 3rem; color: #333;">Connect & Discover</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Alumni in Your City</h3>
+                    <p>Connect with fellow graduates in your area. Join local meetups, networking events, and
+                        professional gatherings.</p>
+                    <button class="card-btn">Find Local Alumni</button>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Alumni Directory</h3>
+                    <p>Search our comprehensive directory of alumni by profession, location, graduation year, and
+                        interests.</p>
+                    <button class="card-btn">Browse Directory</button>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <h3>Your Alumni Profile</h3>
+                    <p>Create and manage your professional profile. Share achievements, connect with classmates, and
+                        mentor current students.</p>
+                    <button class="card-btn">View Profile</button>
+                </div>
+            </div>
+        </div>
+    </section>
+<section class="news-events-section" style="padding: 6rem 0; background: #0a1a2e; color: #f0f4f8;">
+    <div class="container">
+        <div class="section-title" style="text-align: center; max-width: 800px; margin: 0 auto 4rem;">
+            <h2 style="font-size: 2.75rem; font-weight: 600; margin-bottom: 1rem; color: #ffffff; font-family: 'Georgia', serif; letter-spacing: -0.5px;">
+                Latest News & Upcoming Events
+            </h2>
+            <p style="font-size: 1.2rem; color: #d0d9e2; line-height: 1.7; font-family: 'Helvetica Neue', Arial, sans-serif;">
+                Stay informed about alumni accomplishments and participate in official networking and development events hosted by the Office of Alumni Affairs.
+            </p>
+        </div>
+
+        <div class="news-events-container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; margin-top: 3rem;">
+
+            <!-- News & Stories Card -->
+            <div class="news-card" style="background: #132b42; border-radius: 12px; padding: 0; box-shadow: 0 8px 24px rgba(0, 15, 30, 0.3); border: 1px solid #1f3c5e; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                <div class="card-header" style="background: #0f243a; color: #e0e8f2; padding: 1.5rem; text-align: center; border-bottom: 1px solid #1f3c5e;">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-bottom: 1rem; opacity: 0.9;">
+                        <path d="M19 5H5C3.89543 5 3 5.89543 3 7V17C3 18.1046 3.89543 19 5 19H19C20.1046 19 21 18.1046 21 17V7C21 5.89543 20.1046 5 19 5Z" stroke="#a0b3c9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M8 9H16" stroke="#a0b3c9" stroke-width="1.5" stroke-linecap="round"/>
+                        <path d="M8 13H16" stroke="#a0b3c9" stroke-width="1.5" stroke-linecap="round"/>
+                        <path d="M8 17H12" stroke="#a0b3c9" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                    <h3 style="font-size: 1.5rem; font-weight: 600; margin: 0; font-family: 'Georgia', serif; color: #e0e8f2; letter-spacing: -0.3px;">News & Stories</h3>
+                </div>
+
+                <div class="card-content" style="padding: 2.5rem;">
+                    <!-- News Item 1 -->
+                    <div class="news-item" style="padding: 1.8rem; background: #1a3452; border-radius: 10px; margin-bottom: 1.8rem; border-left: 3px solid #3b82f6; transition: all 0.3s ease; position: relative; overflow: hidden;">
+                        <div class="news-meta" style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.2rem; font-size: 0.85rem; color: #a0b3c9;">
+                            <span style="background: #1e40af; color: #f0f4f8; padding: 0.3rem 0.9rem; border-radius: 20px; font-weight: 600; font-size: 0.8rem;">ACHIEVEMENT</span>
+                            <span>December 10, 2024</span>
+                        </div>
+                        <h4 style="color: #ffffff; font-size: 1.2rem; font-weight: 600; margin-bottom: 0.7rem; font-family: 'Georgia', serif; line-height: 1.3;">Sarah Johnson '18 Named to Forbes 30 Under 30</h4>
+                        <p style="color: #cbd5e1; font-size: 0.95rem; line-height: 1.7; margin-bottom: 0;">Tech entrepreneur recognized for pioneering AI-driven healthcare diagnostics that improve rural access.</p>
+                    </div>
+
+                    <!-- News Item 2 -->
+                    <div class="news-item" style="padding: 1.8rem; background: #1a3452; border-radius: 10px; margin-bottom: 1.8rem; border-left: 3px solid #d97706; transition: all 0.3s ease; position: relative; overflow: hidden;">
+                        <div class="news-meta" style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.2rem; font-size: 0.85rem; color: #a0b3c9;">
+                            <span style="background: #b45309; color: #fef3c7; padding: 0.3rem 0.9rem; border-radius: 20px; font-weight: 600; font-size: 0.8rem;">SUCCESS STORY</span>
+                            <span>December 8, 2024</span>
+                        </div>
+                        <h4 style="color: #ffffff; font-size: 1.2rem; font-weight: 600; margin-bottom: 0.7rem; font-family: 'Georgia', serif; line-height: 1.3;">Alumni Startup Secures $50M Series A Funding</h4>
+                        <p style="color: #cbd5e1; font-size: 0.95rem; line-height: 1.7; margin-bottom: 0;">Michael Chen '15 leads sustainable energy firm to landmark funding milestone supporting national grid resilience.</p>
+                    </div>
+
+                    <!-- News Item 3 -->
+                    <div class="news-item" style="padding: 1.8rem; background: #1a3452; border-radius: 10px; margin-bottom: 2rem; border-left: 3px solid #059669; transition: all 0.3s ease; position: relative; overflow: hidden;">
+                        <div class="news-meta" style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.2rem; font-size: 0.85rem; color: #a0b3c9;">
+                            <span style="background: #047857; color: #f0f4f8; padding: 0.3rem 0.9rem; border-radius: 20px; font-weight: 600; font-size: 0.8rem;">COMMUNITY</span>
+                            <span>December 5, 2024</span>
+                        </div>
+                        <h4 style="color: #ffffff; font-size: 1.2rem; font-weight: 600; margin-bottom: 0.7rem; font-family: 'Georgia', serif; line-height: 1.3;">Alumni Scholarship Fund Surpasses $1 Million Milestone</h4>
+                        <p style="color: #cbd5e1; font-size: 0.95rem; line-height: 1.7; margin-bottom: 0;">Class of ’95 honors 30th reunion with historic endowment, expanding educational access for underrepresented students.</p>
+                    </div>
+
+                    <button class="card-btn" style="
+                        background: #1f3c5e;
+                        color: #e0e8f2;
+                        border: 1px solid #3b82f6;
+                        padding: 0.875rem 2rem;
+                        border-radius: 6px;
+                        cursor: pointer;
+                        font-weight: 600;
+                        font-size: 0.95rem;
+                        transition: all 0.3s ease;
+                        width: 100%;
+                        font-family: 'Helvetica Neue', Arial, sans-serif;
+                        text-transform: uppercase;
+                        letter-spacing: 0.5px;
+                        margin-top: 1rem;
+                    ">
+                        View All News
+                    </button>
+                </div>
+            </div>
+
+            <!-- Events Card -->
+            <div class="events-card" style="background: #132b42; border-radius: 12px; padding: 0; box-shadow: 0 8px 24px rgba(0, 15, 30, 0.3); border: 1px solid #1f3c5e; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                <div class="card-header" style="background: #0f243a; color: #e0e8f2; padding: 1.1rem; text-align: center; border-bottom: 1px solid #1f3c5e;">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-bottom: 1rem; opacity: 0.9;">
+                        <path d="M8 2V5" stroke="#a0b3c9" stroke-width="1.5" stroke-linecap="round"/>
+                        <path d="M16 2V5" stroke="#a0b3c9" stroke-width="1.5" stroke-linecap="round"/>
+                        <path d="M3 9H21" stroke="#a0b3c9" stroke-width="1.5" stroke-linecap="round"/>
+                        <path d="M7 14H8L9 17H15L16 14H17" stroke="#a0b3c9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12 17V21" stroke="#a0b3c9" stroke-width="1.5" stroke-linecap="round"/>
+                        <rect x="3" y="9" width="18" height="12" rx="2" stroke="#a0b3c9" stroke-width="1.5"/>
+                    </svg>
+                    <h3 style="font-size: 1.5rem; font-weight: 600; margin: 0; font-family: 'Georgia', serif; color: #e0e8f2; letter-spacing: -0.3px;">Upcoming Events</h3>
+                    <p style="color: #a0b3c9; font-size: 0.95rem; margin-top: 0.5rem; font-family: 'Helvetica Neue', Arial, sans-serif;"></p>
+                </div>
+
+                <div class="card-content" style="padding: 2.5rem;">
+                    <!-- Event Item 1 -->
+                    <div class="event-item" style="padding: 1.8rem; background: #1a3452; border-radius: 10px; margin-bottom: 1.8rem; position: relative; border-left: 3px solid #3b82f6; transition: all 0.3s ease;">
+                        <div class="event-date" style="position: absolute; top: 1.2rem; right: 1.2rem; background: #1e40af; color: #f0f4f8; padding: 0.6rem 0.8rem; border-radius: 8px; text-align: center; min-width: 60px; font-size: 0.9rem; font-weight: 700;">
+                            <div style="font-size: 1.2rem; font-weight: 700;">15</div>
+                            <div style="font-size: 0.75rem; margin-top: 0.2rem; opacity: 0.9;">JAN</div>
+                        </div>
+                        <div class="event-type" style="color: #3b82f6; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 0.8rem;">NETWORKING</div>
+                        <h4 style="color: #ffffff; font-size: 1.2rem; font-weight: 600; margin-bottom: 0.8rem; font-family: 'Georgia', serif; line-height: 1.3; padding-right: 80px;">Silicon Valley Alumni Meetup</h4>
+                        <div style="display: flex; align-items: center; gap: 0.7rem; color: #a0b3c9; font-size: 0.9rem; margin-bottom: 0.8rem;">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 11C13.1046 11 14 10.1046 14 9C14 7.89543 13.1046 7 12 7C10.8954 7 10 7.89543 10 9C10 10.1046 10.8954 11 12 11Z" stroke="#a0b3c9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12 21C17.5228 17.75 21 14.25 21 9C21 5.13401 17.866 2 14 2C10.134 2 7 5.13401 7 9C7 14.25 10.4772 17.75 12 21Z" stroke="#a0b3c9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>San Francisco, CA</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.7rem; color: #a0b3c9; font-size: 0.9rem; margin-bottom: 1rem;">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 8V12L15 15" stroke="#a0b3c9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="12" cy="12" r="9" stroke="#a0b3c9" stroke-width="1.5"/>
+                            </svg>
+                            <span>6:00 PM – 9:00 PM</span>
+                        </div>
+                        <p style="color: #cbd5e1; font-size: 0.95rem; line-height: 1.7; margin-bottom: 1.2rem;">Connect with industry leaders and fellow alumni in the Bay Area to foster collaboration and mentorship.</p>
+                        <button style="
+                            background: transparent;
+                            border: 1px solid #3b82f6;
+                            color: #3b82f6;
+                            padding: 0.6rem 1.3rem;
+                            border-radius: 5px;
+                            font-size: 0.9rem;
+                            cursor: pointer;
+                            font-weight: 600;
+                            transition: all 0.3s ease;
+                            text-transform: uppercase;
+                            letter-spacing: 0.3px;
+                            font-family: 'Helvetica Neue', Arial, sans-serif;
+                        ">RSVP Now</button>
+                    </div>
+
+                    <!-- Event Item 2 -->
+                    <div class="event-item" style="padding: 1.8rem; background: #1a3452; border-radius: 10px; margin-bottom: 1.8rem; position: relative; border-left: 3px solid #d97706; transition: all 0.3s ease;">
+                        <div class="event-date" style="position: absolute; top: 1.2rem; right: 1.2rem; background: #b45309; color: #fef3c7; padding: 0.6rem 0.8rem; border-radius: 8px; text-align: center; min-width: 60px; font-size: 0.9rem; font-weight: 700;">
+                            <div style="font-size: 1.2rem; font-weight: 700;">22</div>
+                            <div style="font-size: 0.75rem; margin-top: 0.2rem; opacity: 0.9;">JAN</div>
+                        </div>
+                        <div class="event-type" style="color: #d97706; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 0.8rem;">WORKSHOP</div>
+                        <h4 style="color: #ffffff; font-size: 1.2rem; font-weight: 600; margin-bottom: 0.8rem; font-family: 'Georgia', serif; line-height: 1.3; padding-right: 80px;">Career Advancement Masterclass</h4>
+                        <div style="display: flex; align-items: center; gap: 0.7rem; color: #a0b3c9; font-size: 0.9rem; margin-bottom: 0.8rem;">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 10L19 14L15 18" stroke="#a0b3c9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M5 14L9 10L5 6" stroke="#a0b3c9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12 2V22" stroke="#a0b3c9" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            <span>Virtual Event</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.7rem; color: #a0b3c9; font-size: 0.9rem; margin-bottom: 1rem;">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="9" stroke="#a0b3c9" stroke-width="1.5"/>
+                                <path d="M12 7V12L15 15" stroke="#a0b3c9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>2:00 PM – 4:00 PM</span>
+                        </div>
+                        <p style="color: #cbd5e1; font-size: 0.95rem; line-height: 1.7; margin-bottom: 1.2rem;">Expert-led session on leadership strategy, public service pathways, and executive presence.</p>
+                        <button style="
+                            background: transparent;
+                            border: 1px solid #d97706;
+                            color: #d97706;
+                            padding: 0.6rem 1.3rem;
+                            border-radius: 5px;
+                            font-size: 0.9rem;
+                            cursor: pointer;
+                            font-weight: 600;
+                            transition: all 0.3s ease;
+                            text-transform: uppercase;
+                            letter-spacing: 0.3px;
+                            font-family: 'Helvetica Neue', Arial, sans-serif;
+                        ">Register Free</button>
+                    </div>
+
+                    <!-- Event Item 3 -->
+                    <div class="event-item" style="padding: 1.8rem; background: #1a3452; border-radius: 10px; margin-bottom: 2rem; position: relative; border-left: 3px solid #ec4899; transition: all 0.3s ease;">
+                        <div class="event-date" style="position: absolute; top: 1.2rem; right: 1.2rem; background: #be185d; color: #f0f4f8; padding: 0.6rem 0.8rem; border-radius: 8px; text-align: center; min-width: 60px; font-size: 0.9rem; font-weight: 700;">
+                            <div style="font-size: 1.2rem; font-weight: 700;">05</div>
+                            <div style="font-size: 0.75rem; margin-top: 0.2rem; opacity: 0.9;">FEB</div>
+                        </div>
+                        <div class="event-type" style="color: #ec4899; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 0.8rem;">CELEBRATION</div>
+                        <h4 style="color: #ffffff; font-size: 1.2rem; font-weight: 600; margin-bottom: 0.8rem; font-family: 'Georgia', serif; line-height: 1.3; padding-right: 80px;">Annual Alumni Gala</h4>
+                        <div style="display: flex; align-items: center; gap: 0.7rem; color: #a0b3c9; font-size: 0.9rem; margin-bottom: 0.8rem;">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21C17.5228 17.75 21 14.25 21 9C21 5.13401 17.866 2 14 2C10.134 2 7 5.13401 7 9C7 14.25 10.4772 17.75 12 21Z" stroke="#a0b3c9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12 11C13.1046 11 14 10.1046 14 9C14 7.89543 13.1046 7 12 7C10.8954 7 10 7.89543 10 9C10 10.1046 10.8954 11 12 11Z" stroke="#a0b3c9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Grand Ballroom, NYC</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.7rem; color: #a0b3c9; font-size: 0.9rem; margin-bottom: 1rem;">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="9" stroke="#a0b3c9" stroke-width="1.5"/>
+                                <path d="M12 7V12L15 15" stroke="#a0b3c9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>7:00 PM – 11:00 PM</span>
+                        </div>
+                        <p style="color: #cbd5e1; font-size: 0.95rem; line-height: 1.7; margin-bottom: 1.2rem;">An evening of recognition, reflection, and connection honoring distinguished alumni contributions to public service.</p>
+                        <button style="
+                            background: transparent;
+                            border: 1px solid #ec4899;
+                            color: #ec4899;
+                            padding: 0.6rem 1.3rem;
+                            border-radius: 5px;
+                            font-size: 0.9rem;
+                            cursor: pointer;
+                            font-weight: 600;
+                            transition: all 0.3s ease;
+                            text-transform: uppercase;
+                            letter-spacing: 0.3px;
+                            font-family: 'Helvetica Neue', Arial, sans-serif;
+                        ">Get Tickets</button>
+                    </div>
+
+                    <button class="card-btn" style="
+                        background: #1f3c5e;
+                        color: #e0e8f2;
+                        border: 1px solid #ec4899;
+                        padding: 0.875rem 2rem;
+                        border-radius: 6px;
+                        cursor: pointer;
+                        font-weight: 600;
+                        font-size: 0.95rem;
+                        transition: all 0.3s ease;
+                        width: 100%;
+                        font-family: 'Helvetica Neue', Arial, sans-serif;
+                        text-transform: uppercase;
+                        letter-spacing: 0.5px;
+                        margin-top: 1rem;
+                    ">
+                        View All Events
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Alumni Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 2rem; color: #333;">Alumni Around the World</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 3rem;">Discover where our graduates are making
+                their mark across the globe</p>
+            <div class="map-container">
+                <div id="alumni-map" style="height: 500px; width: 100%;"></div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section -->
+    <section id="about" style="padding: 4rem 0; background: #f8f9fa;">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 2rem;">About AlumniConnect</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto; color: #666; font-size: 1.1rem;">
+                We're building the world's most comprehensive alumni network platform, connecting graduates with
+                opportunities,
+                mentorship, and meaningful relationships that last a lifetime. Join us in creating a legacy of success
+                and giving back.
+            </p>
+        </div>
+    </section>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close" onclick="closeModal('loginModal')">&times;</span>
+                <h2>Welcome Back</h2>
+                <p>Sign in to your alumni account</p>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%; margin-bottom: 1rem;">Sign
+                        In</button>
+                    <p style="text-align: center; color: #666;">
+                        Don't have an account?
+                        <a href="#" style="color: #667eea;"
+                            onclick="closeModal('loginModal'); openModal('signupModal');">Sign up here</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close" onclick="closeModal('signupModal')">&times;</span>
+                <h2>Join Our Network</h2>
+                <p>Choose your account type to get started</p>
+            </div>
+            <div class="modal-body">
+                <div class="signup-options">
+                    <div class="signup-option" onclick="selectSignupType('organization')">
+                        <i class="fas fa-building"></i>
+                        <h4>Organization</h4>
+                        <p>Educational institutions and companies</p>
+                    </div>
+                    <div class="signup-option" onclick="selectSignupType('student')">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h4>Student</h4>
+                        <p>Current students and recent graduates</p>
+                    </div>
+                    <div class="signup-option" onclick="selectSignupType('alumni')">
+                        <i class="fas fa-user-graduate"></i>
+                        <h4>Alumni</h4>
+                        <p>Graduated professionals and mentors</p>
+                    </div>
+                </div>
+                <button class="btn btn-primary" style="width: 100%; margin-top: 2rem;" onclick="proceedWithSignup()">
+                    Continue
+                </button>
+                <p style="text-align: center; color: #666; margin-top: 1rem;">
+                    Already have an account?
+                    <a href="#" style="color: #667eea;"
+                        onclick="closeModal('signupModal'); openModal('loginModal');">Sign in here</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="map" style="height: 600px;"></div>
+
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+    <!-- Chatbot Floating Button -->
+    <div class="chatbot-button" onclick="toggleChatbot()">
+        <i class="fas fa-comments"></i>
+    </div>
+
+    <!-- Chatbot Window -->
+    <div class="chatbot-window" id="chatbotWindow">
+        <div class="chatbot-header">
+            <span>AlumniConnect Assistant</span>
+            <button class="close-btn" onclick="toggleChatbot()">&times;</button>
+        </div>
+        <div class="chatbot-messages" id="chatbotMessages">
+            <div class="bot-message">👋 Hi! How can I help you today?</div>
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="chatInput" placeholder="Type your message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
